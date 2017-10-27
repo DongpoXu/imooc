@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+
+/* 公用 */
+
+.comWidth {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.leftArea {
+    float: left;
+}
+
+.rightArea {
+    float: right;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}

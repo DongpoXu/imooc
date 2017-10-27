@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+.vertical li {
+    width: auto;
+    float: none;
+    padding-left: 8px;
+}
+
+.vertical .nav_title,
+.vertical .nav_cont h3 {
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+
+
+/* 筛选 */
+
+.screening {
+    border-bottom: #ccc solid 1px;
+}
+
+.screening dt {
+    line-height: 32px;
+    width: 74px;
+    text-align: right;
+    float: left;
+    margin-right: 42px;
+}
+
+.limit {
+    line-height: 32px;
+    width: 55px;
+    float: left;
+}
+
+.screening .active {
+    background-color: blue;
+    color: #FFF;
+}
+
+.screening a {
+    padding: 2px;
+}
+
+.screening_list {
+    line-height: 32px;
+    width: 626px;
+    float: left;
+}
+
+.screening_list li {
+    width: 20%;
+    float: left;
+}
+
+.screen_more {
+    border: #CCC solid 1px;
+    height: 23px;
+    line-height: 23px;
+    margin-top: 4px;
+    float: left;
+    padding-right: 11px;
+    padding-left: 11px;
+    margin-right: 10px;
+}
+
+.screen_more a {
+    padding-right: 14px;
+    background: url(../images/icon/sj_grey.gif) right center no-repeat;
+}
+
+.addInfo {
+    height: 31px;
+    border: #CCC solid 1px;
+    background-color: #F5F5F5;
+}
+
+.address {
+    float: left;
+}
+
+.add_text {
+    float: left;
+    line-height: 31px;
+    padding-left: 12px;
+    padding-right: 6px;
+}
+
+.addInfo .select {
+    margin-top: 4px;
+}
+
+.screen_text {
+    line-height: 31px;
+    padding-right: 80px;
+}
+
+.check {
+    position: relative;
+    top: -1px;
+}
+
+.check input,
+.check label {
+    vertical-align: middle;
+}
+
+.shop_number em {
+    color: #F00;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.screen_text span {
+    vertical-align: middle;
+}
+
+.addCar {
+    border: #999 solid 1px;
+    height: 22px;
+    display: inline-block;
+    padding: 0px 6px 0px 23px;
+    background: url(../images/icon/car.jpg) 6px center no-repeat;
+}
+
+.screening_list_more {
+    padding-left: 0.5%;
+}
+
+.screening_list_more .item {
+    width: 33.3%;
+}
+
+.page {
+    text-align: center;
+}
+
+.page a {
+    height: 24px;
+    display: inline-block;
+    line-height: 24px;
+    border: #CCC solid 1px;
+    padding: 0px 12px;
+    margin: 0px 2px;
+}
+
+.page .hl {
+    display: inline-block;
+    padding: 0px 12px;
+    margin: 0px 2px;
+}
+
+.morePage {
+    padding-left: 14px;
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+}
+
+.pageNum {
+    width: 29px;
+    padding: 0px 3px;
+    border: #CCC solid 1px;
+    height: 24px;
+    line-height: 24px\9;
+    text-align: center;
+    margin-left: 4px;
+}
+
+.page_btn {
+    width: 44px;
+    height: 24px;
+    line-height: 24px;
+    background-color: #E8E8E8;
+    border: #CCC solid 1px;
+}
+
+.pageNum span {
+    padding: 0px 6px;
+}
+
+.page a,
+.page span,
+.page input {
+    vertical-align: middle;
+    position: relative;
+}
+
+
+/* 组件 */
+
+.select {
+    border: #999 solid 1px;
+    height: 22px;
+    line-height: 22px;
+    float: left;
+    background-color: #FFF;
+    padding-left: 10px;
+    padding-right: 20px;
+    position: relative;
+    z-index: 4;
+}
+
+.select h3 {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.select span {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 20px;
+    background: url(../images/icon/sj_blue.jpg) center center no-repeat;
+}
+
+.show_select {
+    position: absolute;
+    left: -1px;
+    top: 22px;
+    background-color: #FFF;
+    width: 100%;
+    border: #999 solid 1px;
+    /*默认隐藏*/
+    display: none;
+}
+
+.show_select li {
+    padding-left: 10px;
+}

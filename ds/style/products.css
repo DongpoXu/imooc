@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+/* 产品分类 */
+
+.products .leftArea {
+    width: 185px;
+}
+
+.products .rightArea {
+    width: 810px;
+}
+
+.products .banner_bar {
+    float: none;
+}
+
+/* 产品分类导航 */
+
+.leftNac {
+    background-color: #F3F3F3;
+    border: #D7D7D7 solid 1px;
+}
+
+.nav_title {
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    border-bottom: #D7D7D7 solid 1px;
+    text-align: center;
+}
+
+.nav_cont {
+    /*上 左右 下*/
+    padding: 0px 18px 4px;
+    border-bottom: #D7D7D7 dotted 1px;
+    margin-bottom: -1px;
+}
+
+.nav_cont h3 {
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.navCont_list {
+    line-height: 25px;
+}
+
+.navCont_list li {
+    float: left;
+    width: 50%;
+}
+
+.hr_7 {
+    height: 7px;
+    overflow: hidden;
+}
+
+.hr_15 {
+    height: 15px;
+    overflow: hidden;
+}
+
+.hr_25 {
+    height: 25px;
+    overflow: hidden;
+}
+
+/* 标题 */
+
+.products_title {
+    height: 34px;
+    border-bottom: #CCCCCC solid 2px;
+}
+
+.products_title h3 {
+    width: 180px;
+    border-bottom: #096DBA solid 2px;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 9px;
+}
+
+.products .item {
+    width: 25%;
+    *width: 24.9%;
+    margin-bottom: 10px;
+}
+
+/* 商品 */
+
+.item {
+    float: left;
+    height: 265px;
+    position: relative;
+}
+
+.item_cont {
+    padding: 0px 15px;
+}
+
+.img_item {
+    height: 170px;
+    text-align: center;
+}
+
+.item p {
+    line-height: 20px;
+}
+
+.img_item img {
+    height: 170px;
+}
+
+.item a {
+    color: #000;
+}
+
+.item a:hover {
+    text-decoration: underline;
+}
+
+.money {
+    color: #D4106A;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.stars {
+    width: 13px;
+    height: 12px;
+    overflow: hidden;
+    background: url(../images/icon/xing.gif) left no-repeat;
+    display: inline-block;
+    margin-right: 1px;
+}
+
+.hot {
+    width: 52px;
+    height: 52px;
+    background: url(../images/icon/hot.jpg) left top no-repeat;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}

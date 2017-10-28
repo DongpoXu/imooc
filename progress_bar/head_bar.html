@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位在头部的进度条</title>
+    <link rel="stylesheet" href="style/head_bar.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+
+<div class="loading">
+    <div class="pic"></div>
+</div>
+
+<header>
+    <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2140194120,3181925453&fm=27&gp=0.jpg"
+         alt="">
+    <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3291624004,2681256374&fm=200&gp=0.jpg"
+         alt="">
+</header>
+
+<script>
+    $(".loading .pic").animate({width:"10%"},100)
+</script>
+
+<section class="banner">
+    <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2140194120,3181925453&fm=27&gp=0.jpg"
+         alt="">
+    <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3291624004,2681256374&fm=200&gp=0.jpg"
+         alt="">
+</section>
+
+<script>
+    $(".loading .pic").animate({width:"30%"},100)
+</script>
+
+<section class="about">
+    <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2140194120,3181925453&fm=27&gp=0.jpg"
+         alt="">
+    <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3291624004,2681256374&fm=200&gp=0.jpg"
+         alt="">
+</section>
+
+<script>
+    $(".loading .pic").animate({width:"50%"},100)
+</script>
+
+<section class="pro">
+    <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2140194120,3181925453&fm=27&gp=0.jpg"
+         alt="">
+    <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3291624004,2681256374&fm=200&gp=0.jpg"
+         alt="">
+</section>
+
+<script>
+    $(".loading .pic").animate({width:"80%"},100)
+</script>
+
+<section class="news">
+    <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2140194120,3181925453&fm=27&gp=0.jpg"
+         alt="">
+    <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3291624004,2681256374&fm=200&gp=0.jpg"
+         alt="">
+</section>
+
+<script>
+    $(".loading .pic").animate({width:"95%"},100)
+</script>
+
+<footer>
+    <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2140194120,3181925453&fm=27&gp=0.jpg"
+         alt="">
+    <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3291624004,2681256374&fm=200&gp=0.jpg"
+         alt="">
+</footer>
+
+<script>
+    $(".loading .pic").animate({width:"100%"},100,function () {
+        $(".loading").fadeOut();
+    })
+</script>
+
+</body>
+</html>

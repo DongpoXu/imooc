@@ -50,34 +50,116 @@
     <div class="shopping_item">
         <h3 class="shopping_tit">收货地址</h3>
         <div class="shopping_cont padding_shop">
-            <ul>
-                <li><span><em>*</em>选择地区：</span>
+            <ul class="shopping_list">
+                <li><span class="shopping_list_text"><em>*</em>选择地区：</span>
                     <div class="select">
                         <h3>海淀区五环内</h3>
                         <span></span>
                         <ul class="show_select">
                             <li>上帝</li>
-                            <li>上帝</li>
-                            <li>上帝</li>
-                            <li>上帝</li>
+                            <li>五道口</li>
+                            <li>公主坟</li>
                         </ul>
                     </div>
                 </li>
-                <li><span><em>*</em>选择地区：</span>
-                    <input type="text" value="最多输入26个汉字">
+                <li><span class="shopping_list_text"><em>*</em>详细地址：</span>
+                    <input type="text" value="最多输入26个汉字" class="input input_b">
                 </li>
-                <li><span><em>*</em>选择地区：</span>
-                    <input type="text" value="最多10个汉字">
+                <li><span class="shopping_list_text"><em>*</em>收 货 人：</span>
+                    <input type="text" value="最多10个汉字" class="input">
                 </li>
-                <li><span><em>*</em>选择地区：</span>
-                    <input type="text" value="如13448294923">
+                <li><span class="shopping_list_text"><em>*</em>手	 机：</span>
+                    <input type="text" value="如13448294923" class="input">
+                    <span class="cart_tel">&nbsp;或固定电话：</span><input type="text" value="区号" class="input input_s"><span
+                            class="ganghao">-</span><input
+                            type="text" value="电话号码" class="input input_m"><span class="ganghao">-</span><input
+                            type="text" value="分机号（可选）" class="input input_m">
+                </li>
+                <li>
+                    <input type="button" class="affirm">
                 </li>
             </ul>
         </div>
     </div>
+    <div class="hr_25"></div>
+    <div class="shopping_item">
+        <h3 class="shopping_tit">支付方式</h3>
+        <div class="shopping_cont padding_shop">
+            <ul class="shopping_list">
+                <li>
+                    <input type="radio" class="radio"><label id="r1" for="r1">微信支付</label> 微信扫一扫就能支付
+                </li>
+                <li>
+                    <input type="radio" class="radio"><label id="r2" for="r2">微信支付</label> 微信扫一扫就能支付
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="hr_25"></div>
+    <div class="shopping_item">
+        <h3 class="shopping_tit">送货清单<a href="#" class="backCar">返回购物车修改</a></h3>
+        <div class="shopping_cont pb_10">
+            <div class="cart_inner">
+                <div class="cart_head clearfix">
+                    <div class="cart_item t_name">商品名称</div>
+                    <div class="cart_item t_price">单价</div>
+                    <div class="cart_item t_return">返现</div>
+                    <div class="cart_item t_num">数量</div>
+                    <div class="cart_item t_subtotal">小计</div>
+                </div>
+                <div class="cart_cont clearfix">
+                    <div class="cart_item t_name">
+                        <div class="cart_shopInfo clearfix">
+                            <img src="images/des_sm.jpg" alt="des_sm">
+                            <div class="cart_shopInfo_cont">
+                                <p class="cart_link"><a href="#">微信支付微信支付微信支付微</a></p>
+                                <p class="cart_info">微信支付微信支付微信支付微</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart_item t_price">单价</div>
+                    <div class="cart_item t_return">返现</div>
+                    <div class="cart_item t_num">数量</div>
+                    <div class="cart_item t_subtotal t_red">小计</div>
+                </div>
+                <div class="cart_message">
+                    若有问题请留言，若有问题请留言
+                </div>
+                <div class="cart_prompt"><i class="cart_prompt_icon"></i>抱歉，一下商品无法购买。</div>
+                <div class="cart_cont cart_no_bor clearfix">
+                    <div class="cart_item t_name">
+                        <div class="cart_shopInfo clearfix">
+                            <img src="images/des_sm.jpg" alt="des_sm">
+                            <div class="cart_shopInfo_cont">
+                                <p class="cart_link"><a href="#">微信支付微信支付微信支付微</a></p>
+                                <p class="cart_info">微信支付微信支付微信支付微</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart_item t_price">单价</div>
+                    <div class="cart_item t_return">返现</div>
+                    <div class="cart_item t_num">数量</div>
+                    <div class="cart_item t_subtotal t_red">小计</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="hr_25"></div>
+    <div class="shopping_item">
+        <h3 class="shopping_tit">订单结算</h3>
+        <div class="shopping_cont padding_shop clearfix">
+            <div class="cart_count">
+                <div class="cart_rmb">
+                    <i>总计：|</i><span>￥1459.00</span>
+                </div>
+                <div class="cart_btnBox">
+                    <input type="button" class="cart_btn" value="提交订单">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-
 <div class="hr_25"></div>
 <div class="footer">
     <p>

@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+/*登陆*/
+.red_logo .comWidth {
+    width: 630px;
+}
+
+.regBox {
+    width: 628px;
+    margin: 10px auto;
+    border: #CCC solid 1px;
+}
+
+.reg_item {
+    font: 14px/34px "宋体";
+    width: 110px;
+    text-align: right;
+    float: left;
+}
+
+.reg_item i {
+    color: red;
+    font-style: normal;
+    margin-right: 5px;
+}
+
+.input_item{
+    width:306px;
+    float: left;
+}
+
+.regBox li{
+    height:70px;
+    vertical-align: top;
+}
+.regBox .hei{
+    height:46px;
+    padding:0;
+}
+
+.regBox .login_cont{
+    padding:45px 76px 20px 76px;
+}
+
+
+

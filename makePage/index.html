@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- 可以用于制作分页页码的标签 -->
+    <!-- <a></a><span></span><div></div> -->
+    <link rel="stylesheet" href="style/main.css">
+
+</head>
+<body>
+<!--行内元素中间有间隙-->
+<!--
+产生原因：换行符、Tab（制表符）、空格
+解决办法：1、元素写成一行
+         2、设置font-size:0
+-->
+<div class="page-normal">
+    <span class="page-prev">&lt;</span>
+    <span class="page-current">1</span>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">7</a>
+    ...
+    <a href="#">199</a>
+    <a href="#">200</a>
+    <a href="#">&gt;</a>
+</div>
+
+</body>
+</html>

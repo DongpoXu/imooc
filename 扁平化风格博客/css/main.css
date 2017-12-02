@@ -1,0 +1,185 @@
+nav {
+    background: #ccc;
+    height: 50px;
+}
+
+#banner {
+    background: #777;
+    height: 700px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    float: right;
+}
+
+nav ul li,
+nav .logo {
+    display: inline-block;
+    line-height: 50px;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #fff;
+    line-height: inherit;
+    /*display: inline-block;*/
+    height: inherit;
+    /*以上两句增加点击范围*/
+}
+
+.logo {
+    float: left;
+    padding: 0 10px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px; /*字间距*/
+}
+
+.logo a {
+    color: #fff;
+}
+
+#banner .inner {
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 160px;
+}
+
+#banner .inner h1 {
+    margin: 0;
+}
+
+button {
+    border: none;
+    background: #333;
+    color: #eee;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#banner button {
+    padding: 14px 50px;
+}
+
+#banner .inner .more {
+    margin-top: 280px;
+}
+
+.subHeading {
+    line-height: 30px;
+    margin: 30px;
+    font-size: 18px;
+}
+
+.hr {
+    width: 100%;
+    height: 2px;
+    margin: 20px auto;
+}
+
+.greenSection {
+    text-align: center;
+    background: #089db0;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.greenSection .hr {
+    background: #078494;
+    width: 60%;
+}
+
+.iconGroup {
+    margin-top: 60px;
+}
+
+.greenSection .iconGroup .icon {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: #0d6f7c;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: 20px;
+}
+
+.wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.wrapper h2 {
+    font-size: 30px;
+}
+
+.graySection {
+    background: #252f34;
+    color: #fff;
+}
+
+.graySection .imgSection {
+    width: 45%;
+}
+
+.imgSection img {
+    width: 100%;
+}
+
+.articlePreview:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.articlePreview>div {
+    float: left;
+}
+
+.graySection .textSection {
+    width: 55%;
+    position: relative;
+    top: 68px;
+    left: 50px;
+}
+
+.graySection .textSection h2 {
+    margin-bottom: 20px;
+}
+
+.graySection .textSection p {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

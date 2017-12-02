@@ -1,0 +1,61 @@
+宏观---细分
+
+页面整体分析：
+div
+    header
+    section id=banner
+    section id=one
+    section id=two
+    section id=three
+    section id=cta
+    footer
+各模块分析：
+header
+    h1
+        a
+    nav
+        ul
+            li
+                a
+                采用模块化，可以方便添加菜单。
+
+section id=banner
+    div class=inner
+        h2
+            p
+        ul
+            li
+                a
+
+section id=one
+    header
+    ul
+        li
+
+section id=two
+    section
+        div
+            img
+        div
+            h2
+            p
+    section
+        div
+        div
+    section
+        div
+        div
+
+section id=three
+    div
+        header
+        ul
+            li*6
+
+section id=cta
+    div
+        header
+        ul
+
+footer id=footer
+    ul*2

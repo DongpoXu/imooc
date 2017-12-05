@@ -1,0 +1,20 @@
+1.使用Sass更好的书写CSS
+
+2.RequireJS进行模块化开发，编写出方便复用的代码
+
+3.使用CSS3实现简单的动画效果
+
+
+
+Sass的基础知识：
+    将sass编译成css--koala工具使用(这里我改为了对WebStorm中ruby的配置)
+
+为什么使用RequireJS
+    1.有效的防止命名冲突
+    2.声明不同js文件之间的依赖
+    3.可以让我们的代码以模块化的方式组织
+
+常用方法
+    1.requirejs.config
+    2.requirejs
+    3.define

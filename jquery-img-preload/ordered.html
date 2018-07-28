@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>img ordered preload</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        .box {
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            padding: 0 10px;
+            margin: 50px auto;
+            color: #333;
+        }
+
+        .btn:hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532600069362&di=79721cc6453f21d977894c509559b762&imgtype=0&src=http%3A%2F%2Fwx1.sinaimg.cn%2Flarge%2F640d9c0agy1fj0ydn4110j21w01w0wyu.jpg"
+         alt="01" id="img" width="800">
+    <p>
+        <a href="javascript:" class="btn" data-control="prev">prev page</a>
+        <a href="javascript:" class="btn" data-control="next">next page</a>
+    </p>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/preload.js"></script>
+<script>
+    let imgs = [
+        'http://wx4.sinaimg.cn/large/640d9c0agy1firo0xmjzkj21qa1qae7u.jpg',
+        'http://img.scol.cn/data/attachment/forum/201312/27/231815jtr8c0nt2bbcb2e2.jpg',
+        'http://wx4.sinaimg.cn/large/5fd43565ly1fbds96vuosj22c02c07wi.jpg',
+        'http://ww2.sinaimg.cn/large/640d9c0agw1f6tig884a1j2241241qv5.jpg',
+        'http://ww2.sinaimg.cn/large/640d9c0agw1f229bvfnqoj224a24ax6s.jpg',
+        'http://ww2.sinaimg.cn/large/5fd43565gw1f7bj9d4p7hj21ep242kjm.jpg',
+        'http://ww1.sinaimg.cn/large/640d9c0agw1ewkulbsih2j21w01w07wh.jpg',
+        'http://wx4.sinaimg.cn/large/640d9c0agy1fj0ydtvlp3j21u31u3hc1.jpg',
+        'http://imglf2.ph.126.net/_ir7bipu4CsMNKp7S7cxOw==/59109745126974602.jpg',
+        'http://ww2.sinaimg.cn/large/640d9c0agw1f6dbg2uxxjj2295295x6p.jpg',
+        'http://img.scol.cn/data/attachment/forum/201404/20/031815pf48y72moxty146j.jpg',
+    ];
+
+    let len = imgs.length,
+        index = 0;
+
+    $.preload(imgs, {
+        order: 'ordered'
+    });
+
+    $('.btn').on('click', function () {
+        /* Put prev in front to avoid assignment errors */
+        if ('prev' === $(this).data('control')) {        //prev page
+            index = Math.max(0, --index);
+        } else {     //next page
+            index = Math.min(len - 1, ++index);
+        }
+        document.title = (index + 1) + '/' + len;
+        $('#img').attr('src', imgs[index]);
+    });
+</script>
+
+</body>
+</html>

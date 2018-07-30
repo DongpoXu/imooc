@@ -5,6 +5,7 @@
     <title>img unordered preload</title>
     <style>
         html, body {
+            /*定义总高度，方便子元素设定高度*/
             height: 100%;
         }
 
@@ -51,7 +52,7 @@
 
 <div class="box">
     <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532600069362&di=79721cc6453f21d977894c509559b762&imgtype=0&src=http%3A%2F%2Fwx1.sinaimg.cn%2Flarge%2F640d9c0agy1fj0ydn4110j21w01w0wyu.jpg"
-         alt="01" id="img" width="800">
+         alt="01" id="img" height="800">
     <p>
         <a href="javascript:" class="btn" data-control="prev">prev page</a>
         <a href="javascript:" class="btn" data-control="next">next page</a>
@@ -64,7 +65,7 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/preload.js"></script>
 <script>
-    let imgs = [
+    let imgs = [        //Sets the preloaded array
         'http://wx4.sinaimg.cn/large/640d9c0agy1firo0xmjzkj21qa1qae7u.jpg',
         'http://img.scol.cn/data/attachment/forum/201312/27/231815jtr8c0nt2bbcb2e2.jpg',
         'http://wx4.sinaimg.cn/large/5fd43565ly1fbds96vuosj22c02c07wi.jpg',
@@ -79,34 +80,36 @@
     ];
 
     let index = 0,
-        len = imgs.length,
-        $progress = $('.progress');
+        len = imgs.length,      //Get the array lens
+        $progress = $('.progress');     //Load the element about loading
 
-    //引入插件
+    //import plugins
     $.preload(imgs, {
         order: 'unordered',
-        each: function (count) {
+        each: function (count) {        //Each img load or error then change the loading value
             $progress.html(Math.round((count + 1) / len * 100) + '%');
         },
-        all: function () {
+        all: function () {      //When all the imgs loaded, hide the loading page
             $('.loading').hide();
+            //document.title - the current page title
             document.title = '1/' + len;
         }
     });
 
-    $('.btn').on('click', function () {
+    //Different events are executed according to the press of the button
+    $('.btn').on('click', function () {     //Get the click event like .btn
         /* Put prev in front to avoid assignment errors */
         if ('prev' === $(this).data('control')) {        //prev page
             // index--;
             // if (index < 0){
             //     index = 0;
             // }
-            index = Math.max(0, --index);
-        } else {     //next page
+            index = Math.max(0, --index);       //Boundary conditions are implemented using Math functions
+        } else {        //next page
             index = Math.min(len - 1, ++index);
         }
         document.title = (index + 1) + '/' + len;
-        $('#img').attr('src', imgs[index]);
+        $('#img').attr('src', imgs[index]);     //change img attribute: src
     });
 </script>
 

@@ -65,7 +65,7 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/preload.js"></script>
 <script>
-    let imgs = [        //Sets the preloaded array
+    let imgs = [        //Sets the preload array
         'http://wx4.sinaimg.cn/large/640d9c0agy1firo0xmjzkj21qa1qae7u.jpg',
         'http://img.scol.cn/data/attachment/forum/201312/27/231815jtr8c0nt2bbcb2e2.jpg',
         'http://wx4.sinaimg.cn/large/5fd43565ly1fbds96vuosj22c02c07wi.jpg',
@@ -88,6 +88,7 @@
         order: 'unordered',
         each: function (count) {        //Each img load or error then change the loading value
             $progress.html(Math.round((count + 1) / len * 100) + '%');
+
         },
         all: function () {      //When all the imgs loaded, hide the loading page
             $('.loading').hide();

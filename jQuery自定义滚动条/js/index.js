@@ -1,9 +1,19 @@
 (function (win, doc, $) {
     function CusScrollBar(options) {
-        this._init(options);
+        this._init(options)
+            ._initDomEvent()
+            ._initSliderDragEvent()
+            ._initArticleHeight()
+            ._initTabEvent()
+            ._bindContScroll()
+            ._bindMouseWheel();
     }
-
     $.extend(CusScrollBar.prototype, {
+        /**
+         * @desc 总体初始化
+         * @date 2018/8/1
+         * @author XDP
+        */
         _init: function (options) {
             let self = this;
             console.info(this);
@@ -20,39 +30,34 @@
                 articleSelector: ".scroll-ol",      //文章选择器
             };
             $.extend(true, self.options, options || {});    //深拷贝
-            self._initDomEvent();
 
             return self;
         },
         /**
-         * @author XDP
-         * @date 2018/7/31
          * @desc 初始化DOM引用
-         */
+         * @date 2018/8/1
+         * @author XDP
+        */
         _initDomEvent: function () {
-            let opts = this.options;
+            let self = this;
+            let opts = self.options;
             //滚动内容对象
-            this.$cont = $(opts.contSelector);
+            self.$cont = $(opts.contSelector);
             //滚动条滑块对象
-            this.$slider = $(opts.sliderSelector);
+            self.$slider = $(opts.sliderSelector);
             //滚动条对象
-            this.$bar = opts.barSelector ? $(opts.barSelector) : self.$slider.parent();
+            self.$bar = opts.barSelector ? $(opts.barSelector) : self.$slider.parent();
             //获取文档对象
-            this.$doc = $(doc);
+            self.$doc = $(doc);
             //标签项
-            this.$tabItem = $(opts.tabItemSelector);
+            self.$tabItem = $(opts.tabItemSelector);
             //锚点项
-            this.$anchor = $(opts.anchorSelector);
+            self.$anchor = $(opts.anchorSelector);
             //正文
-            this.$artical = $(opts.articleSelector);
+            self.$artical = $(opts.articleSelector);
             //校正元素对象
-            this.$correct = $(opts.correctSelector);
-
-            this._initSliderDragEvent()
-                ._initArticleHeight()
-                ._initTabEvent()
-                ._bindContScroll()
-                ._bindMouseWheel();
+            self.$correct = $(opts.correctSelector);
+            return self;
         },
         /**
          * @desc 初始化滑块拖动功能

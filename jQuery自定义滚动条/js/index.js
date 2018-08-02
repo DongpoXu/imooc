@@ -1,3 +1,8 @@
+/**
+ * @desc 用立即执行函数包住函数作用域
+ * @date 2018/8/2
+ * @author XDP
+*/ 
 (function (win, doc, $) {
     function CusScrollBar(options) {
         this._init(options)
@@ -17,7 +22,6 @@
          */
         _init: function (options) {
             let self = this;
-            console.info(this);
             self.options = {
                 scrollDir: "y",     //滚动方向
                 contSelector: "",   //滚动内容区域选择器
@@ -30,7 +34,7 @@
                 correctSelector: ".correct-bot",    //校正元素
                 articleSelector: ".scroll-ol",      //文章选择器
             };
-            $.extend(true, self.options, options || {});    //深拷贝
+            $.extend(true, self.options, options || {});    //深拷贝将传入元素覆盖
 
             return self;
         },
@@ -87,14 +91,12 @@
 
                 slider.on('mousedown', function (e) {
                     e.preventDefault();
-                    console.info('mousedown');
 
                     dragStartPagePosition = e.pageY;
                     dragStartScrollPosition = self.$cont[0].scrollTop;
                     dragContBarRate = self.getMaxScrollPosition() / self.getMaxSliderPosition();
                     doc.on('mousemove.scroll', mousemoveHandler)
-                        .on('mouseup.scroll', function (e) {
-                            console.info('mouseup');
+                        .on('mouseup.scroll', function () {
                             doc.off('.scroll');
                         });
                 });

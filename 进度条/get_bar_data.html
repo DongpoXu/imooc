@@ -16,10 +16,10 @@
                     oImg.onload = null;
                     num++;
                     $('.loading b').html(parseInt(num / $("img").length * 100) + '%');
-                    if (img.length == i+1) {
+                    if (img.length === i+1) {
                         $('.loading').fadeOut();
                     }
-                }
+                };
                 oImg.src = img[i].src;
             })
         })

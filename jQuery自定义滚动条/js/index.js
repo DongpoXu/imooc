@@ -8,12 +8,13 @@
             ._bindContScroll()
             ._bindMouseWheel();
     }
+
     $.extend(CusScrollBar.prototype, {
         /**
          * @desc 总体初始化
          * @date 2018/8/1
          * @author XDP
-        */
+         */
         _init: function (options) {
             let self = this;
             console.info(this);
@@ -37,7 +38,7 @@
          * @desc 初始化DOM引用
          * @date 2018/8/1
          * @author XDP
-        */
+         */
         _initDomEvent: function () {
             let self = this;
             let opts = self.options;

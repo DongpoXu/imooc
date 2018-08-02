@@ -14,32 +14,43 @@ thead, tr, th, td {
     font-family: inherit;
     vertical-align: baseline;
 }
+
 :focus {
     outline: 0;
 }
+
 table {
     border-collapse: separate;
     border-spacing: 0;
 }
+
 caption, th, td {
     text-align: left;
     font-weight: normal;
 }
+
 a img, iframe {
     border: none;
 }
+
 ol, ul {
     list-style: none;
 }
+
 input, textarea, select, button {
     font-size: 100%;
     font-family: inherit;
 }
+
 select {
     margin: inherit;
 }
+
 /* Fixes incorrect placement of numbers in ol’s in IE6/7 */
-ol { margin-left:2em; }
+ol {
+    margin-left: 2em;
+}
+
 /* == clearfix == */
 .clearfix:after {
     content: ".";
@@ -48,6 +59,15 @@ ol { margin-left:2em; }
     clear: both;
     visibility: hidden;
 }
-.clearfix {display: inline-block;}
-* html .clearfix {height: 1%;}
-.clearfix {display: block;}
+
+.clearfix {
+    display: inline-block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}

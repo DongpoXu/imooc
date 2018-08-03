@@ -1,11 +1,19 @@
 (function ($) {
     "use strict";
+    
+    /**
+     * @desc 注意；！！ let的作用域是："之后"+"内部"，内部互相引用了，注意第26行引用了PageSwitch
+     * @date 2018/8/3
+     * @author XDP
+     */ 
+    let PageSwitch,
+        _prefix;
 
     /*说明:获取浏览器前缀*/
     /*实现：判断某个元素的css样式中是否存在transition属性*/
     /*参数：dom元素*/
     /*返回值：boolean，有则返回浏览器样式前缀，否则返回false*/
-    let _prefix = (function (temp) {
+    _prefix = (function (temp) {
         let aPrefix = ["webkit", "Moz", "o", "ms"],
             props = "";
         for (let i in aPrefix) {
@@ -17,7 +25,7 @@
         return false;
     })(document.createElement(PageSwitch));
 
-    var PageSwitch = (function () {
+    PageSwitch = (function () {
         function PageSwitch(element, options) {
             this.settings = $.extend(true, $.fn.PageSwitch.defaults, options || {});
             this.element = element;

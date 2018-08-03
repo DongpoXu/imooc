@@ -4,10 +4,12 @@ let can,
 let w,
     h;
 
+// create image container
 let girlPic = new Image(),
     starPic = new Image();
 
-let num = 60;
+// define the number of stars
+let num = 120;
 
 let stars = [];
 
@@ -16,7 +18,11 @@ let lastTime,
 
 let confine = false;
 
+// define the image location and size
 let padLeft = 50, padTop = 50, girlWidth = 450, girlHeight = 600;
+
+// load and execution
+document.body.onload = init;
 
 function init() {
     can = document.getElementById("canvas");
@@ -39,8 +45,6 @@ function init() {
     lastTime = Date.now();
     gameLoop();
 }
-
-document.body.onload = init;
 
 function gameLoop() {
     window.requestAnimationFrame(gameLoop);

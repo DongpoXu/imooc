@@ -179,7 +179,9 @@
                     clearTimeout(resizeId);
                     resizeId = setTimeout(function () {
                         let currentLength = self.switchLength();
-                        let offset = self.settings.direction ? self.section.eq(self.index).offset().top : self.section.eq(self.index).offset().left;
+                        let offset = self.settings.direction ?
+                            self.section.eq(self.index).offset().top :
+                            self.section.eq(self.index).offset().left;
                         if (Math.abs(offset) > currentLength / 2 && self.index < (self.pagesCount - 1)) {
                             self.index++;
                         }
@@ -219,7 +221,10 @@
                     });
                 }
                 if (self.settings.pagination && !init) {
-                    self.pageItem.eq(self.index).addClass(self.activeClass).siblings("li").removeClass(self.activeClass);
+                    self.pageItem.eq(self.index)
+                        .addClass(self.activeClass)
+                        .siblings("li")
+                        .removeClass(self.activeClass);
                 }
             },
         };

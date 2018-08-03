@@ -9,10 +9,13 @@
     let PageSwitch,
         _prefix;
 
-    /*说明:获取浏览器前缀*/
-    /*实现：判断某个元素的css样式中是否存在transition属性*/
-    /*参数：dom元素*/
-    /*返回值：boolean，有则返回浏览器样式前缀，否则返回false*/
+    /**
+     * @desc 获取浏览器前缀
+     * @date 2018/8/3
+     * @author XDP
+     * 判断某个元素的css样式中是否存在transition属性
+     * 如果有transition返回浏览器样式前缀，否则返回false
+     */
     _prefix = (function (temp) {
         let aPrefix = ["webkit", "Moz", "o", "ms"],
             props = "";

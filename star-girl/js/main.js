@@ -9,7 +9,7 @@ let girlPic = new Image(),
     starPic = new Image();
 
 // define the number of stars
-let num = 120;
+let num = 80;
 
 let stars = [];
 

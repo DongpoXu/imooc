@@ -202,17 +202,17 @@
             },
             /*滑动动画*/
             _scrollPage: function (init) {
-                let self = this;
-                let dest = self.section.eq(self.index).position();
-                if (!dest) return;
+                let self = this,
+                    dist = self.section.eq(self.index).position();
+                if (!dist) return;
 
                 self.canscroll = false;
                 if (_prefix) {
-                    let translate = self.direction ? "translateY(-" + dest.top + "px)" : "translateX(-" + dest.left + "px)";
+                    let translate = self.direction ? "translateY(-" + dist.top + "px)" : "translateX(-" + dist.left + "px)";
                     self.sections.css(_prefix + "transition", "all " + self.settings.duration + "ms " + self.settings.easing);
                     self.sections.css(_prefix + "transform", translate);
                 } else {
-                    let animateCss = self.direction ? {top: -dest.top} : {left: -dest.left};
+                    let animateCss = self.direction ? {top: -dist.top} : {left: -dist.left};
                     self.sections.animate(animateCss, self.settings.duration, function () {
                         self.canscroll = true;
                         if (self.settings.callback) {

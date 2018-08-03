@@ -1,11 +1,12 @@
 (function ($) {
+    /* 严格模式 */
     "use strict";
-    
+
     /**
-     * @desc 注意；！！ let的作用域是："之后"+"内部"，内部互相引用了，注意第26行引用了PageSwitch
+     * @desc 注意！！！ let的作用域是："之后"+"内部"，内部互相引用了，注意第26行引用了PageSwitch
      * @date 2018/8/3
      * @author XDP
-     */ 
+     */
     let PageSwitch,
         _prefix;
 
@@ -32,7 +33,7 @@
         function PageSwitch(element, options) {
             this.settings = $.extend(true, $.fn.PageSwitch.defaults, options || {});
             this.element = element;
-            this.init();
+            this.init();        //执行初始化程序
         }
 
         PageSwitch.prototype = {

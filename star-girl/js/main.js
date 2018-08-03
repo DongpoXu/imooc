@@ -47,7 +47,7 @@ function init() {
 }
 
 function gameLoop() {
-    window.requestAnimationFrame(gameLoop);
+    window.requestAnimFrame(gameLoop);
 
     let now = Date.now();
     deltaTime = now - lastTime;

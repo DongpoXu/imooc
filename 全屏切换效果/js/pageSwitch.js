@@ -36,7 +36,7 @@
                 self.sections = self.element.find(self.selectors.sections);
                 self.section = self.sections.find(self.selectors.section);
 
-                self.direction = self.settings.direction === "vertical";
+                self.direction = self.settings.direction === "vertical" ? true : false;
                 self.pagesCount = self.pagesCount();
                 self.index = (self.settings.index >= 0 && self.settings.index <= self.pagesCount) ? self.settings.index : 0;
 
@@ -255,6 +255,7 @@
     $(function () {
         $('[data-PageSwitch]').PageSwitch({
             loop: true,
+            direction: "horizontal",
         });
     });
 })(jQuery);

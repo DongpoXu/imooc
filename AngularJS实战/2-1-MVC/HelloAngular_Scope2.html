@@ -8,7 +8,7 @@
 <body>
 <div ng-controller="EventController">
     Root scope
-    <tt>MyEvent</tt> count: {{count}}
+    MyEvent count: {{count}}
     <ul>
         <li ng-repeat="i in [1]" ng-controller="EventController">
             <button ng-click="$emit('MyEvent')">
@@ -19,11 +19,11 @@
             </button>
             <br>
             Middle scope
-            <tt>MyEvent</tt> count: {{count}}
+            MyEvent count: {{count}}
             <ul>
                 <li ng-repeat="item in [1, 2]" ng-controller="EventController">
                     Leaf scope
-                    <tt>MyEvent</tt> count: {{count}}
+                    MyEvent count: {{count}}
                 </li>
             </ul>
         </li>

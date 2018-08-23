@@ -40,7 +40,7 @@
 
 ###AngularJS实战
 
-[HelloAngular_Directive](https://aelousdp.github.io/imooc/AngularJS实战/Angular.md)
+[HelloAngular_Directive](https://aelousdp.github.io/imooc/AngularJS实战/README.md)
 
 [HelloAngular_Directive](https://aelousdp.github.io/imooc/AngularJS实战/1-1-Start/HelloAngular_Directive.html)
 

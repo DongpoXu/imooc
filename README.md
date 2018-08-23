@@ -39,6 +39,9 @@
 [进度条06](https://aelousdp.github.io/imooc/进度条/timer_bar.html)
 
 ###AngularJS实战
+
+[HelloAngular_Directive](https://aelousdp.github.io/imooc/AngularJS实战/Angular.md)
+
 [HelloAngular_Directive](https://aelousdp.github.io/imooc/AngularJS实战/1-1-Start/HelloAngular_Directive.html)
 
 [HelloAngular_Module](https://aelousdp.github.io/imooc/AngularJS实战/1-1-Start/HelloAngular_Module.html)

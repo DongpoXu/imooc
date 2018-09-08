@@ -5,6 +5,11 @@ MyCSSModule.controller('CSSCtrl', ['$scope',
         $scope.color = 'red';
         $scope.setGreen = function () {
             $scope.color = 'green';
+            console.log("set Green");
+        };
+        $scope.setRed = function () {
+            $scope.color = 'red';
+            console.log("set Red");
         }
     }
 ]);

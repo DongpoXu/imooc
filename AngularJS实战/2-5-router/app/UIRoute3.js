@@ -29,6 +29,7 @@ routerApp.config(function ($stateProvider, $urlRouterProvider) {
                 },
             },
         })
+
         .state('index.usermng.highendusers', {
             url: "/highendusers",
             templateUrl: "template3/highendusers.html",

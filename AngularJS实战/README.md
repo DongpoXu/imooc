@@ -34,3 +34,13 @@
 [NgClass](https://aelousdp.github.io/imooc/AngularJS实战/2-3-bind-app/NgClass.html)
 
 [NgShow](https://aelousdp.github.io/imooc/AngularJS实战/2-3-bind-app/NgShow.html)
+
+[bookstore](https://aelousdp.github.io/imooc/AngularJS实战/2-4-bookstore/app/index.html)
+
+第五个例子:路由
+
+[UIRoute1](https://aelousdp.github.io/imooc/AngularJS实战/2-5-router/app/UIRoute1.html)
+
+[UIRoute2](https://aelousdp.github.io/imooc/AngularJS实战/2-5-router/app/UIRoute2.html)
+
+[UIRoute3](https://aelousdp.github.io/imooc/AngularJS实战/2-5-router/app/UIRoute3.html)

@@ -13,5 +13,7 @@
     <orderEntry type="library" name="@types/node" level="application" />
     <orderEntry type="library" name="@types/react" level="application" />
     <orderEntry type="library" name="@types/webpack" level="application" />
+    <orderEntry type="library" name="@types/bootstrap" level="application" />
+    <orderEntry type="library" name="@types/ui-router-extras" level="application" />
   </component>
 </module>

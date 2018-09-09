@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="list-group">
+                    <a href="" class="list-group-item active">用户分类</a>
+                    <a href="" ui-sref="index.usermng.highendusers" class="list-group-item">VIP用户</a>
+                    <a href="" ui-sref="index.usermng.normalusers" class="list-group-item">会员用户</a>
+                    <a href="" ui-sref="index.usermng.lowusers" class="list-group-item">普通用户</a>
+                    <a href="" ui-sref="index.usermng.blacklist" class="list-group-item">黑名单</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-primary" ng-click="addUserType()">新增用户</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div ui-view=""></div>
+    </div>
+</div>

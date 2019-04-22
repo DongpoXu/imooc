@@ -187,9 +187,7 @@
         index -= 1    // 角标值减1
       }
       showButton()  // 显示按钮变化
-      // if (!animated) {
       animate(600)  // 整体右移600px，相当于往前翻页
-      // }
     }
 
     oNext.onclick = function () {
@@ -199,9 +197,7 @@
         index += 1
       }
       showButton()  // 显示按钮变化
-      // if (!animated) {
       animate(-600) // 整体左移600px，相当于往后翻页
-      // }
     }
 
     for (let i = 0; i < oButtons.length; i++) {
@@ -211,9 +207,7 @@
         }
         let myIndex = parseInt(this.getAttribute('index'))  // 获取自定义属性值
         let offsetLeft = -600 * (myIndex - index) // 计算宽度
-        // if (!animated) {
         animate(offsetLeft) // 移动
-        // }
         index = myIndex // 更新index值
         showButton()  // 更新圆点动画
       }

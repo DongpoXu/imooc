@@ -44,4 +44,4 @@
 
 ### 焦点轮播图
 
-[AngularJS实战目录](https://aelousdp.github.io/imooc/焦点轮播图/index.html)
+[焦点轮播图](https://aelousdp.github.io/imooc/焦点轮播图/index.html)

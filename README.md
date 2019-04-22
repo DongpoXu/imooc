@@ -38,6 +38,10 @@
 
 [进度条06](https://aelousdp.github.io/imooc/进度条/timer_bar.html)
 
-###AngularJS实战
+### AngularJS实战
 
 [AngularJS实战目录](https://aelousdp.github.io/imooc/AngularJS实战/)
+
+### 焦点轮播图
+
+[AngularJS实战目录](https://aelousdp.github.io/imooc/焦点轮播图/index.html)

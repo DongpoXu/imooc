@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>焦点轮播图</title>
+    <style>
+
+      * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+      }
+
+      body {
+        padding: 20px;
+      }
+
+      #container {
+        width: 600px;
+        height: 400px;
+        border: 3px solid #333;
+        overflow: hidden;
+        position: relative;
+      }
+
+      #imgList {
+        width: 4200px;
+        height: 400px;
+        position: absolute;
+        z-index: 1;
+      }
+
+      #imgList img {
+        float: left;
+      }
+
+      #btnList {
+        position: absolute;
+        height: 10px;
+        width: 100px;
+        z-index: 2;
+        bottom: 20px;
+        left: 250px;
+      }
+
+      #btnList span {
+        cursor: pointer;
+        float: left;
+        border: 1px solid #fff;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #333;
+        margin-right: 5px;
+      }
+
+      #btnList .on {
+        background: orangered;
+      }
+
+      .arrow {
+        cursor: pointer;
+        display: none;
+        line-height: 39px;
+        text-align: center;
+        font-size: 36px;
+        font-weight: bold;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        z-index: 2;
+        top: 180px;
+        background-color: RGBA(0, 0, 0, 0.3);
+        color: #fff;
+      }
+
+      .arrow:hover {
+        background-color: RGBA(0, 0, 0, 0.7);
+      }
+
+      #container:hover .arrow {
+        display: block;
+      }
+
+      #prev {
+        left: 20px;
+      }
+
+      #next {
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="imgList" style="left: -600px;">
+        <img src="img/5.jpg" alt="1">
+        <img src="img/1.jpg" alt="1">
+        <img src="img/2.jpg" alt="2">
+        <img src="img/3.jpg" alt="3">
+        <img src="img/4.jpg" alt="4">
+        <img src="img/5.jpg" alt="5">
+        <img src="img/1.jpg" alt="5">
+      </div>
+      <div id="btnList">
+        <span index="1" class="on"></span>
+        <span index="2"></span>
+        <span index="3"></span>
+        <span index="4"></span>
+        <span index="5"></span>
+      </div>
+      <a href="#" id="prev" class="arrow">&lt;</a>
+      <a href="#" id="next" class="arrow">&gt;</a>
+    </div>
+  </body>
+  <script>
+  window.onload = function () {
+    let oDiv = document.getElementById('container')
+    let oImgList = document.getElementById('imgList')
+    let oButtons = document.getElementById('btnList').getElementsByTagName('span')
+    let oPrev = document.getElementById('prev')
+    let oNext = document.getElementById('next')
+
+    let index = 1
+    let animated = false
+
+    let timer
+
+    function showButton () {
+      for (let i = 0; i < oButtons.length; i++) {
+        if (oButtons[i].className === 'on') { // 其余按钮关闭
+          oButtons[i].className = ''
+          break   // 如果已经清除了按钮，直接跳出循环，减少资源消耗
+        }
+      }
+      oButtons[index - 1].className = 'on'  // 当前索引的按钮点亮
+    }
+
+    function animate (offsetLeft) {
+      if (animated) {
+        return
+      }
+      animated = true
+      let newLeft = parseInt(oImgList.style.left) + offsetLeft
+      let time = 1000 // 位移总时间
+      let interval = 10  // 位移间隔时间
+      let speed = offsetLeft / (time / interval)  // 每次的位移量
+
+      function go () {
+        if ((speed < 0 && parseInt(oImgList.style.left) > newLeft) || (speed > 0 && parseInt(oImgList.style.left) < newLeft)) {
+          oImgList.style.left = parseInt(oImgList.style.left) + speed + 'px'
+          setTimeout(go, interval)  // 间隔10ms再次执行go（递归）
+        } else {
+          animated = false
+          oImgList.style.left = newLeft + 'px'
+          if (newLeft > -600) { // 抵达第5张的预设图
+            oImgList.style.left = -3000 + 'px'  // 切换到第五张图
+          }
+          if (newLeft < -3000) {  // 抵达第一张预设图
+            oImgList.style.left = -600 + 'px'   // 切换到第一张图
+          }
+        }
+      }
+
+      go()  // 执行
+    }
+
+    function play () {
+      timer = setInterval(function () {
+        next.onclick()
+      }, 1000)
+    }
+
+    function stop () {
+      clearInterval(timer)
+    }
+
+    oDiv.onmouseout = play
+    oDiv.onmouseover = stop
+
+    play()
+
+    oPrev.onclick = function () {
+      if (index === 1) { // 边界设置
+        index = 5
+      } else {
+        index -= 1    // 角标值减1
+      }
+      showButton()  // 显示按钮变化
+      // if (!animated) {
+      animate(600)  // 整体右移600px，相当于往前翻页
+      // }
+    }
+
+    oNext.onclick = function () {
+      if (index === 5) { // 边界设置
+        index = 1
+      } else {
+        index += 1
+      }
+      showButton()  // 显示按钮变化
+      // if (!animated) {
+      animate(-600) // 整体左移600px，相当于往后翻页
+      // }
+    }
+
+    for (let i = 0; i < oButtons.length; i++) {
+      oButtons[i].onclick = function () {   // 遍历圆点，绑定点击事件
+        if (this.className === 'on') {  // 判断是否有必要执行
+          return
+        }
+        let myIndex = parseInt(this.getAttribute('index'))  // 获取自定义属性值
+        let offsetLeft = -600 * (myIndex - index) // 计算宽度
+        // if (!animated) {
+        animate(offsetLeft) // 移动
+        // }
+        index = myIndex // 更新index值
+        showButton()  // 更新圆点动画
+      }
+    }
+  }
+  </script>
+</html>
